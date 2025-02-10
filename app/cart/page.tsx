@@ -3,6 +3,7 @@
 import { CartProvider, useCart } from "@/context/cartcontext";
 import Navbar from "@/components/navbar";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function CartPage() {
   const { cart } = useCart();
@@ -30,7 +31,7 @@ export default function CartPage() {
               cart.map((item, index) => (
                 <tr key={index}>
                   <td className="border p-2 flex items-center gap-4">
-                    <img src={item.productImage.asset.url} alt={item.title} className="w-16 h-16 object-cover" />
+                    <Image src={item.productImage.asset.url} alt={item.title} className="w-16 h-16 object-cover" />
                     {item.title}
                   </td>
                   <td className="border p-2">${item.price}</td>

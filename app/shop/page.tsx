@@ -70,7 +70,7 @@ export default function ShopPage() {
               <div className="cursor-pointer">
                 {/* Product Image */}
                 <div className="flex justify-center items-center w-full h-[350px]">
-                  <img
+                  <Image
                     src={product.productImage.asset.url}
                     alt={product.title}
                     className="object-cover w-full h-full"
