@@ -4,6 +4,9 @@ import Hero from "../components/hero";
 import Productsection from "../components/Productsection";
 import Inspiration from "../components/inspiration";
 import Footer from '../components/Footer';
+import ToasterComponent from "@/components/ToasterComponent";
+
+
 export default function HomePage() {
   return (
     <div>
@@ -14,8 +17,9 @@ export default function HomePage() {
         <Productsection />
         <Inspiration />
         <Footer />
-      </main>
-    </div>
+        <ToasterComponent />
+            </main>
+          </div>
   );
 }
 

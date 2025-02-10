@@ -1,5 +1,5 @@
 
-"use client"
+"use client";
 import { client } from "@/sanity/lib/client";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar";
@@ -17,10 +17,6 @@ interface Product {
       url: string;
     };
   };
-}
-
-interface CartProduct extends Product {
-  quantity: number;
 }
 
 export default function ProductPage({ params }: { params: { productId: string } }) {
@@ -120,7 +116,9 @@ export default function ProductPage({ params }: { params: { productId: string } 
             {/* Add to Cart Button */}
             <button
               className="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors"
-              onClick={() => addToCart({ ...product, quantity } as CartProduct)}
+              onClick={() =>
+                addToCart({ ...product, quantity }) // ✅ Adds selected quantity
+              }
             >
               Add to Cart
             </button>

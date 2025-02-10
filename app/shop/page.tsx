@@ -45,7 +45,6 @@ export default function ShopPage() {
           alt="Contact Header"
           width={1440}
           height={316}
-          layout="responsive"
           className="object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -69,12 +68,19 @@ export default function ShopPage() {
             <Link href={`/shop/${product._id}`} passHref>
               <div className="cursor-pointer">
                 {/* Product Image */}
-                <div className="flex justify-center items-center w-full h-[350px]">
-                  <Image
-                    src={product.productImage.asset.url}
-                    alt={product.title}
-                    className="object-cover w-full h-full"
-                  />
+                <div className="relative w-full h-[350px]">
+                  {product.productImage?.asset?.url ? (
+                    <Image
+                      src={product.productImage.asset.url}
+                      alt={product.title}
+                      layout="fill"  // Responsive image
+                      objectFit="cover" // Prevent distortion
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                      <span className="text-gray-500">No Image Available</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Product Info */}
