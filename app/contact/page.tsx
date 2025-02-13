@@ -1,29 +1,32 @@
-
-import React from 'react';
-import Navbar from '../../components/navbar';
-import Image from 'next/image';
+import React from "react";
+import Navbar from "../../components/navbar";
+import Image from "next/image";
 import { FaLocationDot, FaPhone, FaClock } from "react-icons/fa6";
-import Footer from '../../components/Footer';
-import Featuresection from '../../components/featuresection';
+import Footer from "../../components/Footer";
+import Featuresection from "../../components/featuresection";
 
 export default function Contact() {
   return (
     <div>
       <Navbar />
       <div className="relative w-full flex flex-col items-center">
-              <Image
-                src="/contact image.png"
-                alt="Contact Header"
-                width={1440}
-                height={316}
-                layout="responsive"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">Contact</h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black">Home &gt; Contact</p>
-              </div>
-            </div>
+        <Image
+          src="/contact image.png"
+          alt="Contact Header"
+          width={1440}
+          height={316}
+          layout="responsive"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">
+            Contact
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
+            Home &gt; Contact
+          </p>
+        </div>
+      </div>
 
       {/* Contact Section */}
       <div className="bg-white py-16 px-8">

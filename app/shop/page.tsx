@@ -73,7 +73,7 @@ export default function ShopPage() {
                     <Image
                       src={product.productImage.asset.url}
                       alt={product.title}
-                      layout="fill"  // Responsive image
+                      layout="fill" // Responsive image
                       objectFit="cover" // Prevent distortion
                     />
                   ) : (
